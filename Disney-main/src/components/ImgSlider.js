@@ -14,7 +14,9 @@ const ImgSlider = (props) => {
   };
   return (
     <Carousel {...settings}>
-    {/* images SLider poster */}
+      {/* images SLider poster */}
+
+
       <Wrap>
         <a>
           <img src="/images/slider-badging.jpg" alt="" />
@@ -23,19 +25,13 @@ const ImgSlider = (props) => {
 
       <Wrap>
         <a>
-          <img src="/images/slider-scale.jpg" alt="" />
+          <img src="/images/slider-badging2.jpg" alt="" />
         </a>
       </Wrap>
 
       <Wrap>
         <a>
-          <img src="/images/slider-badag.jpg" alt="" />
-        </a>
-      </Wrap>
-
-      <Wrap>
-        <a>
-          <img src="/images/slider-scales.jpg" alt="" />
+          <img src="/images/slider-badging3.jpg" alt="" />
         </a>
       </Wrap>
     </Carousel>
@@ -98,7 +94,7 @@ const Wrap = styled.div`
 
     img {
       width: 100%;
-      height: 100%;
+      height: 500px;
     }
 
     &:hover {

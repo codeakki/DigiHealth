@@ -59,7 +59,7 @@ const Header = (props) => {
   return (
     <Nav>
       <Logo>
-        <img src="/images/logo.svg" alt="Disney+" />
+        <img src="/images/logo.png" class="mainLogo" alt="DigiHealth" />
       </Logo>
 
       {!userName ? (
@@ -68,28 +68,20 @@ const Header = (props) => {
         <>
           <NavMenu>
             <a href="/home">
-              <img src="/images/home-icon.svg" alt="HOME" />
-              <span>HOME</span>
+              <img src="/images/home-icon.svg" alt="My Profile" />
+              <span>My Profile</span>
             </a>
             <a>
-              <img src="/images/search-icon.svg" alt="SEARCH" />
-              <span>SEARCH</span>
+              <img src="/images/med.png" alt="Get Medications" />
+              <span> Get Medications</span>
             </a>
             <a>
-              <img src="/images/watchlist-icon.svg" alt="WATCHLIST" />
-              <span>WATCHLIST</span>
+              <img src="/images/covid.png" alt="Covid Precautions" />
+              <span>Covid Precautions</span>
             </a>
             <a>
-              <img src="/images/original-icon.svg" alt="ORIGINALS" />
-              <span>ORIGINALS</span>
-            </a>
-            <a>
-              <img src="/images/movie-icon.svg" alt="MOVIES" />
-              <span>MOVIES</span>
-            </a>
-            <a>
-              <img src="/images/series-icon.svg" alt="SERIES" />
-              <span>SERIES</span>
+              <img src="/images/contact.jpg" alt="Contact Us" />
+              <span>Contact Us</span>
             </a>
           </NavMenu>
           <SignOut>
@@ -109,14 +101,14 @@ const Nav = styled.nav`
   top: 0;
   left: 0;
   right: 0;
-  height: 70px;
-  background-color: #090b13;
+  height: 90px;
+  background-color: blue;
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 0 36px;
   letter-spacing: 16px;
-  z-index: 3;
+  z-index: 3;4
 `;
 
 const Logo = styled.a`
@@ -129,7 +121,9 @@ const Logo = styled.a`
 
   img {
     display: block;
-    width: 100%;
+    width: 130px;
+    margin-top:-25px;
+    margin-left:-19px;
   }
 `;
 
@@ -159,13 +153,13 @@ const NavMenu = styled.div`
 
     span {
       color: rgb(249, 249, 249);
-      font-size: 13px;
+      font-size: 18px;
       letter-spacing: 1.42px;
       line-height: 1.08;
       padding: 2px 0px;
       white-space: nowrap;
       position: relative;
-
+      font-weight :bold;
       &:before {
         background-color: rgb(249, 249, 249);
         border-radius: 0px 0px 4px 4px;
