@@ -1,3 +1,5 @@
-# DigiHealth
+# Disney-Prime UI Clone Reactjs
+# Website is Live at:https://disney-prime.web.app/
 
-To run the project use npm start in the terminal
+# About 
+This Project is a simplified front-end clone of Disney with complete transaction effects and a streaming interface. I have to use google firebase authentication to set up the login page Also once u log in to the website the user will able to see his current profile picture on the top right corner. The website is completely responsive according to Desktop, Tab, and mobile phones. In the header section of the website I used Material UI components and a very good Hower effect when the user moves the cursor above the material UI icons and the top left most section contains the Disney logo that will open the home page once u clicked upon the logo while on the top right-most corner I have used user avatar that will help user to sign-out from the website that functionality was added by using google firebase authentication technology. Below the header section, I used the Image Slider that will contain four different posters of the full size that will keep changing also I created different sections as per user interests to stream trailers once clicked on any card title created with Redux, Axios, and CSS  that include Grid and Flex box

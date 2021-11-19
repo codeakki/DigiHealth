@@ -14,8 +14,6 @@ const ImgSlider = (props) => {
   };
   return (
     <Carousel {...settings}>
-      {/* images SLider poster */}
-
 
       <Wrap>
         <a>
