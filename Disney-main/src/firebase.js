@@ -1,16 +1,15 @@
 import firebase from "firebase";
 
+
 const firebaseConfig = {
-    apiKey: "AIzaSyAxxrevc_wCoZnJL7q81WfU0JVX7-Ey9t8",
-    authDomain: "disney-prime.firebaseapp.com",
-    projectId: "disney-prime",
-    storageBucket: "disney-prime.appspot.com",
-    messagingSenderId: "910304343797",
-    appId: "1:910304343797:web:a60ac4bda546f96db237bc",
-    measurementId: "G-P0BEVP8STN"
-  };
-
-
+  apiKey: "AIzaSyC5O3x42mE64ovB_AuJMiJ52nryI4BdlQ4",
+  authDomain: "digi--health.firebaseapp.com",
+  projectId: "digi--health",
+  storageBucket: "digi--health.appspot.com",
+  messagingSenderId: "343924416411",
+  appId: "1:343924416411:web:0662faade575eca242cb3e",
+  measurementId: "G-TL0WSXJKWC"
+};
   const firebaseApp = firebase.initializeApp(firebaseConfig);
   const db = firebaseApp.firestore();
   const auth = firebase.auth();
