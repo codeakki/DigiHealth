@@ -13,7 +13,6 @@ const Home = (props) => {
     <Container>
       <ImgSlider />
       <Viewers />
-
     </Container>
   );
 };
