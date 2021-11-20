@@ -1,5 +1,7 @@
 import styled from "styled-components";
-
+import { Link } from "react-router-dom";
+import Tracker from "./Tracker";
+import {Route} from "react-router-dom";
 /* Foar running Gif on hover */
 
 const Viewers = (props) => {
@@ -9,9 +11,10 @@ const Viewers = (props) => {
         <img src="/images/viewers-appoint.png" alt="" />
       </Wrap>
       <Wrap>
+        <a href={Tracker}>
         <img src="/images/viewers-covid.png" alt="" />
+        </a>
       </Wrap>
-
       <Wrap>
         <img src="/images/viewers-edoc.png" alt="" />
       </Wrap>

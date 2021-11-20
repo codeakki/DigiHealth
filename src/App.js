@@ -3,6 +3,7 @@ import SimpleForm from "./components/chatbot/SimpleForm";
 import Header from "./components/Header";
 import "./App.css";
 import Home from "./components/Home";
+import Tracker from "./components/Tracker";
 
 
 function App() {
@@ -13,6 +14,7 @@ function App() {
         <Header />
         <Switch>
           <Home />
+           <Route exact path="/" component={Tracker} />
           <div>
             <SimpleForm />
           </div>
@@ -21,5 +23,18 @@ function App() {
     </div>
   );
 }
+
+/* function App() {
+  return (
+    <Router>
+      <div>
+        <Switch>
+          <Route exact path="/" component={Tracker} />
+        </Switch>
+      </div>
+    </Router>
+  );
+} */
+
 
 export default App;
