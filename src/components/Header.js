@@ -68,8 +68,8 @@ const Header = (props) => {
         <>
           <NavMenu>
             <a href="/home">
-              <img src="/images/home-icon.svg" alt="My Profile" />
-              <span>My Profile</span>
+              <img src="/images/home-icon.svg" alt="Home" />
+              <span>Home</span>
             </a>
             <a>
               <img src="/images/med.png" alt="Get Medications" />
@@ -102,7 +102,7 @@ const Nav = styled.nav`
   left: 0;
   right: 0;
   height: 90px;
-  background-color: blue;
+  background-color: #2f3578;
   display: flex;
   justify-content: space-between;
   align-items: center;
