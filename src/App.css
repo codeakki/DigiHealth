@@ -8,7 +8,7 @@ nav {
   align-items: center;
   min-height: 10vh;
   background: #231f20;
-  color: white;
+  color: rgb(12, 4, 4);
 }
 
 .nav-links {
@@ -20,7 +20,6 @@ nav {
 }
 
 a {
-  color: white;
+  color: rgb(8, 6, 6);
   text-decoration: underline;
 }
-
