@@ -1,4 +1,4 @@
-import { BrowserRouter as Router,Switch, Route } from "react-router-dom";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import SimpleForm from "./components/chatbot/SimpleForm";
 import Header from "./components/Header";
 import { Provider } from 'react-redux';
@@ -11,22 +11,31 @@ import Symptom from './Symptoms.js';
 function App() {
   return (
     <div className="App">
-      <SimpleForm />
       <Router>
-        <Header />
-        <Switch>  
-          <Home />
-          <div>
+        <Route path="/home"></Route>
+        <Switch>
+          <Route exact path="/home">
+            <Header />
+            <Home />
             <SimpleForm />
-          </div>
-          <Route path="/:date/:month/:year/:timeFrom/details" component={AppointmentDetails}/>
-          <Route path="/:date?/:month?/:year?/" component={Appointment}/>
-          <CovidApp/>
+            <Router>
+              <Symptom />
+            </Router>
+          </Route>
+          <Route exact path="/home/covid">
+            <CovidApp />
+          </Route>
+          <Route exact path="/:date/:month/:year/:timeFrom/details">
+            <AppointmentDetails />
+          </Route>
+          <Route exact path="/:date?/:month?/:year?/">
+            <Appointment />
+          </Route>
+          
         </Switch>
       </Router>
-      <Router>
-        <Symptom/>
-      </Router>
+
+
     </div>
   );
 }
