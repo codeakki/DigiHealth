@@ -4,7 +4,7 @@ import India from "./components/covid/india/india";
 import State from "./components/covid/state/state";
 import Footer from "./components/covid/footer/footer";
 import Headers from "./components/covid/header/headers";
-import Header from "./components/Header"; import styled from "styled-components";
+ import styled from "styled-components";
 export default class CovidApp extends Component {
   render() {
     return (

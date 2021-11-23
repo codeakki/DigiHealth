@@ -26,29 +26,44 @@ class SimpleForm extends Component {
         <ChatBot
           steps={[
             {
-              id: 'intro',
-              message: 'Do you agree to the Terms and Conditions?',
-              trigger: 'intro-user',
+              id:'1', 
+              message:'Heya!, What is your name?', 
+              trigger:'intro-user'
             },
             {
-              id: 'intro-user',
+              id:'intro-user', 
+              user:true,
+              trigger:'response'
+            },
+            {
+              id:'response', 
+              message:'Great!, Hi {previousValue}! What is your gender?', 
+              trigger:'gender'
+            },
+            {
+              id:'gender', 
               options: [
-                { value: 'y', label: 'Yes', trigger: 'yes-response' },
-                { value: 'n', label: 'No', trigger: 'no-response' },
+                { value: "male", label: "Male", trigger: "5" },
+                { value: "female", label: "Female", trigger: "5" }
               ]
             },
             {
-              id: 'yes-response',
-              message: 'Great!',
-              end: true,
+              id: "5",
+              message: "How old are you?",
+              trigger: "age"
             },
             {
-              id: 'no-response',
-              message: 'Sorry to hear that.',
-              end: true,
+           id: "age",
+            user:true,
+            trigger: "end-msg"
             },
-          ]}
-          {...config}
+              {
+                id: "end-msg",
+                message: "Thanks! Your data was submitted successfully!",
+                end: true
+              },
+            ]}
+            {...config}
         />
       </ThemeProvider>
     );
