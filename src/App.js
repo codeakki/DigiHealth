@@ -12,7 +12,7 @@ function App() {
   return (
     <div className="App">
       <Router>
-
+        <Route path="/home"></Route>
         <Switch>
           <Route exact path="/home">
             <Header />
@@ -31,6 +31,7 @@ function App() {
           <Route exact path="/:date?/:month?/:year?/">
             <Appointment />
           </Route>
+          
         </Switch>
       </Router>
 
