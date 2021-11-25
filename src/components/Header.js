@@ -1,6 +1,6 @@
 
 import styled from "styled-components";
-
+// import Login from 'Login';
 
 const Header = (props) => {
 
@@ -9,28 +9,29 @@ const Header = (props) => {
       <Logo>
         <img src="/images/logo.png" class="mainLogo" alt="DigiHealth" />
       </Logo>
-        <>
-          <NavMenu>
-            <a href="/home">
-              <img src="/images/home-icon.svg" alt="Home" />
-              <span>Home</span>
-            </a>
-            <a>
-              <img src="/images/med.png" alt="Get Medications" />
-              <span> Get Medications</span>
-            </a>
-            <a>
-              <img src="/images/covid.png" alt="Covid Precautions" />
-              <span>Covid Precautions</span>
-            </a>
-            <a>
-              <img src="/images/contact.jpg" alt="Contact Us" />
-              <span>Contact Us</span>
-            </a>
-          </NavMenu>
-          <SignOut>
-          </SignOut>
-        </>
+      <>
+        <NavMenu>
+          <a href="/home">
+            <img src="/images/home-icon.svg" alt="Home" />
+            <span>Home</span>
+          </a>
+          <a>
+            <img src="/images/med.png" alt="Get Medications" />
+            <span> Get Medications</span>
+          </a>
+          <a>
+            <img src="/images/covid.png" alt="Covid Precautions" />
+            <span>Covid Precautions</span>
+          </a>
+          <a>
+            <img src="/images/contact.jpg" alt="Contact Us" />
+            <span>Contact Us</span>
+          </a>
+        </NavMenu>
+        <SignOut>
+
+        </SignOut>
+      </>
     </Nav>
   );
 };
