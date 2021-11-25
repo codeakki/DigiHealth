@@ -4,7 +4,7 @@ import Header from "./components/Header";
 import Home from "./components/Home";
 import CovidApp from "./CovidApp";
 import Symptom from './Symptoms.js';
-import AppointApp from "./AppointApp";
+
 function App() {
   return (
     <div className="App">
@@ -21,9 +21,6 @@ function App() {
           </Route>
           <Route exact path="/home/covid">
             <CovidApp />
-          </Route>
-          <Route exact path="/">
-            <AppointApp />
           </Route>
         </Switch>
       </Router>
