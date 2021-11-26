@@ -23,15 +23,15 @@ function App() {
             </Router>
           </Route>
           <Route exact path="/Covid-Tracker">
-            <Header/>
+            <Header />
             <Router>
               <CovidApp />
             </Router>
           </Route>
           <Route exact path="/Navigate-Hospital">
-           <Header/>
+            <Header />
             <Router>
-            <MapContainer />
+              <MapContainer />
             </Router>
           </Route>
           <Route exact path="/home/:date/:month/:year/:timeFrom/details">
@@ -39,6 +39,16 @@ function App() {
           </Route>
           <Route exact path="/home/:date?/:month?/:year?/">
             <Appointment />
+          </Route>
+          <Route exact path="/Covid-19">
+            <Router>
+              <Header />
+              <SimpleForm />
+
+            </Router>
+            <Router>
+              <Symptom />
+            </Router>
           </Route>
         </Switch>
 
