@@ -1,7 +1,7 @@
 import React, { useMemo, useCallback } from 'react';
 import { connect } from 'react-redux';
 import moment from 'moment';
-
+import Header from '../../Header'
 import {
   useParams,
   useHistory,
@@ -23,7 +23,7 @@ const TIME_SLOT = [9, 10, 11, 12, 13, 14, 15, 16];
 
 const Appointment = ({
   appointments,
-}) => { 
+}) => {
   let { date, month, year } = useParams();
   const history = useHistory();
   const currentDate = `${date}/${month}/${year}`;
@@ -40,7 +40,7 @@ const Appointment = ({
   );
 
   const changeDate = useCallback(
-    (newDate) => ( 
+    (newDate) => (
       history.push(
         `/${parseInt(newDate[0])}/${parseInt(newDate[1])}/${parseInt(newDate[2])}/`
       )
@@ -56,7 +56,7 @@ const Appointment = ({
       if (time > 12) {
         time = time - 12;
       }
-    
+
       return `${time} PM`
     }, []
   );
@@ -70,45 +70,46 @@ const Appointment = ({
       <Redirect to={`/home/${date}/${month}/${year}/`} />
     )
   }
- 
+
   return (
     <div className="AppointmentWrapper">
       <div className="navWrapper">
+        <Header />
         <Container className="nav">
-          <div onClick={() => changeDate(gotoDate(-1))} className="button"><img alt="left button" src="/images/left.png"/>️</div>
+          <div onClick={() => changeDate(gotoDate(-1))} className="button"><img alt="left button" src="/images/left.png" />️</div>
           <h2>{currentDate}</h2>
-          <div onClick={() => changeDate(gotoDate(1))} className="button"><img alt="right button" src="/images/right.png"/>️</div>
+          <div onClick={() => changeDate(gotoDate(1))} className="button"><img alt="right button" src="/images/right.png" />️</div>
         </Container>
       </div>
-    <Container>
-      <Row>
-        <Col className="mx-3">
-          <h2 className="mt-5">
-            Select A Time Slot
-          </h2>
-        </Col>
-      </Row>
-      <Row>
-        <Col>
-          { TIME_SLOT.map(
+      <Container>
+        <Row>
+          <Col className="mx-3">
+            <h2 className="mt-5">
+              Select A Time Slot
+            </h2>
+          </Col>
+        </Row>
+        <Row>
+          <Col>
+            {TIME_SLOT.map(
               time => (
                 <Link key={time} to={`${time}/details/`}>
                   <Button className={bookingData[time] && "booked"}>
-                    { formatTime(time) } to { formatTime(++time) }
+                    {formatTime(time)} to {formatTime(++time)}
                   </Button>
                 </Link>
               )
             )
-          }
-        </Col>
-      </Row>
-    </Container>
+            }
+          </Col>
+        </Row>
+      </Container>
     </div>
   );
- }
+}
 
 export default connect(
-  ({appointments}) => ({
+  ({ appointments }) => ({
     appointments,
   })
 )(Appointment);

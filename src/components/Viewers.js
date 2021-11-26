@@ -29,7 +29,7 @@ const Container = styled.div`
   margin-top: 30px;
   padding: 30px 0px 26px;
   display: grid;
-
+  margin-bottom: -133px;
   position:relative;
   top:-210px;
   grid-template-columns: repeat(3, minmax(0, 1fr));

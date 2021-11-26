@@ -96,3 +96,23 @@ a {
 .ant-slider-track {
   background-color: #282c34 !important;
 }
+h3{
+  font-family: 'impact', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: larger;
+  font-weight: bolder;
+  background-color: #6976e9c9;
+}
+h4{
+  font-family: 'impact', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: large;
+  font-weight: bold;
+  background-color: #c7cae7c9;
+}
+li{
+  font-size: 20px;
+  list-style-type:disc  ; 
+}
+p{
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-size: 20px;
+}
