@@ -1,4 +1,41 @@
+.App {
+  text-align: center;
+}
 
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
 
 nav {
   display: flex;
@@ -20,4 +57,42 @@ nav {
 a {
   color: rgb(8, 6, 6);
   text-decoration: underline;
+}
+
+.fw-md {
+  font-weight: 800 !important;
+}
+
+.h-lg {
+  height: 35rem;
+}
+
+.font-5-5 {
+  font-size: 1.5rem;
+}
+
+.image-wrapper-sm {
+  object-fit: cover;
+  border-radius: 50%;
+  height: 15rem;
+  width: 100%;
+}
+
+/* BOOTSTRAP Overwrites */
+.card-title {
+  color: #ee8301;
+}
+
+/* ANTD Overwrites */
+.ant-btn-primary {
+  background-color: #ee8301 !important;
+  border-color: #ee8301 !important;
+}
+
+.ant-slider-handle {
+  border-color: #ee8301 !important;
+}
+
+.ant-slider-track {
+  background-color: #282c34 !important;
 }
