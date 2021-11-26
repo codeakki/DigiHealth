@@ -5,7 +5,7 @@ const Viewers = (props) => {
     <Container>
       <Wrap>
         {/* <Link to="/:date?/:month?/:year?/"> */}
-        <Link to="/Appointment">
+        <Link to="/home/:date?/:month?/:year?/">
           <img src="/images/viewers-appoint.png" alt="" />
         </Link>
       </Wrap>

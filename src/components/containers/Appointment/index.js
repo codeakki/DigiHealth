@@ -67,7 +67,7 @@ const Appointment = ({
     month = currentDate.month() + 1;
     year = currentDate.year();
     return (
-      <Redirect to={`/${date}/${month}/${year}/`} />
+      <Redirect to={`/home/${date}/${month}/${year}/`} />
     )
   }
  

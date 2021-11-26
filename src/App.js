@@ -1,4 +1,4 @@
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import { BrowserRouter as Router, Switch, Navigate, Route } from "react-router-dom";
 import SimpleForm from "./components/chatbot/SimpleForm";
 import Header from "./components/Header";
 import Home from "./components/Home";
@@ -13,9 +13,8 @@ function App() {
   return (
     <div className="App">
       <Router>
-        <Route path="/home"></Route>
         <Switch>
-          <Route exact path="/home">
+          <Route exact path="/" >
             <Header />
             <Home />
             <SimpleForm />
@@ -24,18 +23,25 @@ function App() {
             </Router>
           </Route>
           <Route exact path="/Covid-Tracker">
-            <CovidApp />
+            <Header/>
+            <Router>
+              <CovidApp />
+            </Router>
           </Route>
           <Route exact path="/Navigate-Hospital">
+           <Header/>
+            <Router>
             <MapContainer />
+            </Router>
           </Route>
-          {/* <Route exact path="/:date/:month/:year/:timeFrom/details">
+          <Route exact path="/home/:date/:month/:year/:timeFrom/details">
             <AppointmentDetails />
-          </Route> */}
-          <Route exact path="/Appointment">
+          </Route>
+          <Route exact path="/home/:date?/:month?/:year?/">
             <Appointment />
           </Route>
         </Switch>
+
       </Router>
 
 
