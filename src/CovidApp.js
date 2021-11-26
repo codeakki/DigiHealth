@@ -9,12 +9,6 @@ export default class CovidApp extends Component {
   render() {
     return (
       <div className="container-fluid p-3 main">
-        <NavMenu>
-          <a href="/home">
-            <img src="/images/home-icon.svg" alt="Home" />
-            <span>Home</span>
-          </a>
-        </NavMenu>
         <Headers />
 
         <center>

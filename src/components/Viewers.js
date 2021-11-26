@@ -4,18 +4,21 @@ const Viewers = (props) => {
   return (
     <Container>
       <Wrap>
-        <Link to="/:date?/:month?/:year?/">
+        {/* <Link to="/:date?/:month?/:year?/"> */}
+        <Link to="/home/:date?/:month?/:year?/">
           <img src="/images/viewers-appoint.png" alt="" />
         </Link>
       </Wrap>
       <Wrap>
-        <Link to="/home/covid">
+        <Link to="/Covid-Tracker">
           <img src="/images/viewers-covid.png" alt="" />
         </Link>
       </Wrap>
 
       <Wrap>
-        <img src="/images/viewers-navg.png" alt="" />
+        <Link to="/Navigate-Hospital">
+          <img src="/images/viewers-navg.png" alt="" />
+        </Link>
       </Wrap>
     </Container>
   );

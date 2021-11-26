@@ -1,17 +1,20 @@
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import { BrowserRouter as Router, Switch, Navigate, Route } from "react-router-dom";
 import SimpleForm from "./components/chatbot/SimpleForm";
 import Header from "./components/Header";
 import Home from "./components/Home";
 import CovidApp from "./CovidApp";
 import Symptom from './Symptoms.js';
-
+import Appointment from './components/containers/Appointment/index';
+import AppointmentDetails from './components/containers/AppointmentDetails/index';
+import MapContainer from "./components/containers/MapContainer";
+import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
+import "antd/dist/antd.css";
 function App() {
   return (
     <div className="App">
       <Router>
-        <Route path="/home"></Route>
         <Switch>
-          <Route exact path="/home">
+          <Route exact path="/" >
             <Header />
             <Home />
             <SimpleForm />
@@ -19,29 +22,32 @@ function App() {
               <Symptom />
             </Router>
           </Route>
-          <Route exact path="/home/covid">
-            <CovidApp />
+          <Route exact path="/Covid-Tracker">
+            <Header/>
+            <Router>
+              <CovidApp />
+            </Router>
+          </Route>
+          <Route exact path="/Navigate-Hospital">
+           <Header/>
+            <Router>
+            <MapContainer />
+            </Router>
+          </Route>
+          <Route exact path="/home/:date/:month/:year/:timeFrom/details">
+            <AppointmentDetails />
+          </Route>
+          <Route exact path="/home/:date?/:month?/:year?/">
+            <Appointment />
           </Route>
         </Switch>
+
       </Router>
 
 
-    </div>
+
+    </div >
   );
 }
-
-/* function App() {
-  return (
-    <Router>
-      <div>
-        <Switch>
-           <Route path="/:date/:month/:year/:timeFrom/details" component={AppointmentDetails}/>
-          <Route path="/:date?/:month?/:year?/" component={Appointment}/>
-        </Switch>
-      </div>
-    </Router>
-  );
-} */
-
 
 export default App;

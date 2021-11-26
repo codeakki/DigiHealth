@@ -1,0 +1,35 @@
+.AppointmentWrapper {
+  .navWrapper {
+    background: navy;  /* fallback for old browsers */
+
+    .nav{
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      .button {
+        cursor: pointer;
+        img {
+          margin: 20px;
+          width: 60px;
+        }
+      }
+
+      h2 {
+        color: white;
+      }
+    }
+  }
+
+  button {
+    margin: 10px;
+    width: stretch;
+    width: -webkit-fill-available;
+    padding: 20px;
+
+    &.booked {
+      background-color: red;
+      border-color: red;
+    }
+  }
+}
