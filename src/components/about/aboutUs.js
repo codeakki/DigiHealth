@@ -10,10 +10,7 @@ const AboutUs = () => (
     <div className="about__right">
       <h1 className="about__header">About us</h1>
       <p className="about__paragraph">
-        This application created to help people how cant went to the clinic,
-        start reservation online by one of our clinic by choosing the doctor you
-        want from the clinic beside that you can add the appointment to our
-        database and our back office well call you soon.
+        We at DigiHealth targets to reach as many as possible people around the globe and our main objective is to decrease spread of Covid 19 and reduce Social Gathering and providing Virtual help to everyone.The idea is to provide transformational medical technologies and services to meet the demand for increased access, enhanced quality, and more affordable healthcare for everyone. We transform physical touchpoints into touchless, seamless but still personal and trustworthy digital healthcare experiences.
       </p>
     </div>
   </div>

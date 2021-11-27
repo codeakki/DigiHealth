@@ -4,8 +4,8 @@ import { ThemeProvider } from 'styled-components';
 
 const theme = {
   background: '#f5f8fb',
-  fontFamily: 'Courier New',
-  headerBgColor: '#2f3578',
+  fontFamily: 'Arial',
+  headerBgColor: '#7078d5',
   headerFontColor: '#fff',
   headerFontSize: '15px',
   botBubbleColor: '#2f3578',
