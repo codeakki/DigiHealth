@@ -46,6 +46,7 @@ function App() {
             <Appointment />
           </Route>
           <Route exact path="/Covid-19">
+
                <Header />
                <SimpleForm/>
             <Router>
@@ -69,6 +70,14 @@ function App() {
              <SimpleForm/>
              <Router>
             <AboutUs />
+
+            <Router>
+              <Header />
+              <SimpleForm />
+
+            </Router>
+            <Router>
+              <Symptom />
             </Router>
           </Route>
         </Switch>
