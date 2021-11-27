@@ -26,22 +26,22 @@ class SimpleForm extends Component {
         <ChatBot
           steps={[
             {
-              id:'1', 
-              message:'Heya!, What is your name?', 
-              trigger:'intro-user'
+              id: '1',
+              message: 'Heya!, What is your name?',
+              trigger: 'intro-user'
             },
             {
-              id:'intro-user', 
-              user:true,
-              trigger:'response'
+              id: 'intro-user',
+              user: true,
+              trigger: 'response'
             },
             {
-              id:'response', 
-              message:'Great!, Hi {previousValue}! What is your gender?', 
-              trigger:'gender'
+              id: 'response',
+              message: 'Great!, Hi {previousValue}! What is your gender?',
+              trigger: 'gender'
             },
             {
-              id:'gender', 
+              id: 'gender',
               options: [
                 { value: "male", label: "Male", trigger: "5" },
                 { value: "female", label: "Female", trigger: "5" }
@@ -53,17 +53,17 @@ class SimpleForm extends Component {
               trigger: "age"
             },
             {
-           id: "age",
-            user:true,
-            trigger: "end-msg"
+              id: "age",
+              user: true,
+              trigger: "end-msg"
             },
-              {
-                id: "end-msg",
-                message: "Thanks! Your data was submitted successfully!",
-                end: true
-              },
-            ]}
-            {...config}
+            {
+              id: "end-msg",
+              message: "Thanks! Your data was submitted successfully!",
+              end: true
+            },
+          ]}
+          {...config}
         />
       </ThemeProvider>
     );

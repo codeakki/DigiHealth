@@ -49,10 +49,10 @@
 }
 
 .res_paragraph {
-    font-size: 14px;
+    font-size: 19px;
     text-transform: capitalize;
     font-weight: bold;
-    color: #242429;
+    color: #181836;
     margin-bottom: 0;
     font-family: "Roboto", sans-serif;
 }
@@ -80,5 +80,6 @@
     font-size: 1rem;
     font-family: "Roboto", sans-serif;
     color: #242429;
+    font-weight: bolder;
     padding-bottom: .2rem;
 }

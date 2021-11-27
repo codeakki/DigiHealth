@@ -10,7 +10,7 @@ const ContactUs = () => (
     <div className="reservation">
       <div className="reservation__box">
         <p className="res_paragraph">We Are Here For Your Care</p>
-        <h1 className="res_heder">Best Care & Better Doctor</h1>
+        <h2 className="res_heder">Best Care & Better Doctor</h2>
         <p className="detail__paragraph">
           Our clinics open for you 24/24 and 7 days in week, Be save, and stay
           at home. get your online reservation in any doctor or any clinic what
@@ -20,7 +20,7 @@ const ContactUs = () => (
           <PhoneFilled /> 0100.292.200.00
         </p>
         <p>
-            codewithakki@gmail.com
+          codewithakki@gmail.com
         </p>
       </div>
       <div className="reservation__view">

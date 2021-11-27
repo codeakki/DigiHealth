@@ -15,7 +15,7 @@
 }
 
 .about__header {
-    font-family: "Playfair Display", serif;
+    font-family: "forte";
     font-size: 2rem;
     font-weight: 700;
     margin-bottom: 2rem;
@@ -23,11 +23,10 @@
 }
 
 .about__paragraph {
-    color: #666666;
-    font-family: "Roboto", sans-serif;
-    line-height: 1.929;
-    font-size: 1rem;
-    color: #888888;
+    font-family: "cambria", sans-serif;
+    line-height: 1.927;
+    font-size: 17px;
+    color: #050425;
 }
 
 .about__adv {

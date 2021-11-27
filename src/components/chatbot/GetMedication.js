@@ -4,19 +4,19 @@ import { ThemeProvider } from "styled-components";
 
 const theme = {
   background: "#f5f8fb",
-  fontFamily: "Courier New",
-  headerBgColor: "#ff0000",
-  headerFontColor: "#fff",
+  fontFamily: "Arial",
+  headerBgColor: "#7f87db",
+  headerFontColor: "#050612",
   headerFontSize: "15px",
-  botBubbleColor: "#ff0000",
+  botBubbleColor: "#5e63a3",
   botFontColor: "#fff",
-  userBubbleColor: "#0099ff",
+  userBubbleColor: "#154260",
   userFontColor: "#fff",
 };
 const config = {
-  width: "600px",
-  height: "500px",
-  margin:"15%",
+  width: "50%",
+  height: "479px",
+  margin: "15%",
   floating: false,
 };
 
@@ -119,17 +119,17 @@ class GetMedication extends Component {
             {
               id: "diet",
               message: "Make most of your meal with vegetables and fruits, whole grains, protein, plant oils.",
-              trigger:'99',
+              trigger: '99',
             },
             {
               id: "exercise",
               message: "Make you feel happier, weight loss, good for muscles and bones, increase your energy levels, skin health, reduce pain and all.",
-              trigger:'99',
+              trigger: '99',
             },
             {
               id: "sleep",
               message: "Sleep is an essential function that allows your body and mind to recharge, leaving you refreshed and alert when you wake up.",
-              trigger:'99',
+              trigger: '99',
             },
             {
               id: "99",
@@ -139,12 +139,13 @@ class GetMedication extends Component {
           ]}
           {...config}
           floatingStyle={{
-            left: "calc(50% - 28px)",
-        /*     transformOrigin: "bottom center", */
+            // left: "calc(50% - 28px)",
+            /*     transformOrigin: "bottom center", */
             borderRadius: 0,
           }}
           style={{
-            left: "calc(50% - 175px)",
+            left: "calc(40% - 170px)",
+            top: "100px"
           }}
         />
       </ThemeProvider>
