@@ -3,10 +3,9 @@ import "./App.css";
 import "react-tabs/style/react-tabs.css";
 
 
-function Symptom() {
+function Overview() {
   return (
-    <div style={{ margin: "20px" }}>
-
+      <div style={{ margin: "100px" }}>    
       <h3>Overview</h3>
       <p>
         Coronavirus disease (COVID-19) is an infectious disease caused by a
@@ -155,4 +154,4 @@ function Symptom() {
   );
 }
 
-export default Symptom;
+export default Overview;

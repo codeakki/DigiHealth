@@ -3,6 +3,8 @@ import styled from "styled-components";
 import { useDispatch, useSelector } from "react-redux";
 import { useHistory } from "react-router-dom";
 import { auth, provider } from "../firebase";
+import { Link } from "react-router-dom";
+
 import {
   selectUserName,
   selectUserPhoto,
@@ -66,22 +68,28 @@ const Header = (props) => {
       ) : (
         <>
           <NavMenu>
-            <a href="/home">
+            <a href="/">
               <img src="/images/home-icon.svg" alt="Home" />
               <span>Home</span>
             </a>
-            <a>
+              <Link to="/GetMedication">
               <img src="/images/med.png" alt="Get Medications" />
               <span> Get Medications</span>
-            </a>
+              </Link>   
             <a>
-              <img src="/images/covid.png" alt="Covid Precautions" />
-              <span>Covid Precautions</span>
+              <Link to="/Covid-19">
+                <img src="/images/covid.png" alt="Covid Precautions" />
+                <span>Covid-19</span>
+              </Link>
             </a>
-            <a>
+               <Link to="/contactUs">
               <img src="/images/contact.jpg" alt="Contact Us" />
               <span>Contact Us</span>
-            </a>
+              </Link>
+               <Link to="/AboutUs">
+              <img src="/images/a.png" alt="About Us" />
+              <span>About Us</span>
+              </Link>
           </NavMenu>
           <SignOut>
             <UserImg src={userPhoto} alt={userName} />
@@ -100,7 +108,7 @@ const Nav = styled.nav`
   top: 0;
   left: 0;
   right: 0;
-  height: 90px;
+  height:80px;
   background-color: #2f3578;
   display: flex;
   justify-content: space-between;
