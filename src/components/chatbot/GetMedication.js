@@ -63,9 +63,9 @@ class GetMedication extends Component {
             {
               id: "9",
               options: [
-                { value: 1, label: "Healthy Diet", trigger: "11" },
-                { value: 2, label: "Exercise", trigger: "11" },
-                { value: 3, label: "Adequate Sleep", trigger: "11" },
+                { value: 1, label: "Healthy Diet", trigger: "diet" },
+                { value: 2, label: "Exercise", trigger: "exercise" },
+                { value: 3, label: "Adequate Sleep", trigger: "sleep" },
               ],
             },
             {
@@ -73,27 +73,30 @@ class GetMedication extends Component {
               message: "What happen?",
               trigger: "77",
             },
-
             {
               id: "77",
               options: [
                 { value: 1, label: "Fever", trigger: "fever" },
-                { value: 2, label: "Stomach Aches", trigger: "11" },
-                { value: 3, label: "Muscle Pains", trigger: "11" },
+                { value: 2, label: "Stomach Aches", trigger: "stomach" },
+                { value: 3, label: "Muscle Pains", trigger: "muscle pains" },
               ],
             },
             {
-              id: "11",
-              message: "well done",
-              end: true,
+              id: "stomach",
+              message:
+                "Baking soda for heartburn, mix 1 teaspoon of baking soda in 8 ounces of water and drink it.",
+              trigger: "99",
             },
-
+            {
+              id: "muscle pains",
+              message: "Use a compression bandage to help reduce swelling.",
+              trigger: "99",
+            },
             {
               id: "fever",
               message: "What is your age between?",
               trigger: "op",
             },
-
             {
               id: "op",
               options: [
@@ -114,37 +117,25 @@ class GetMedication extends Component {
               trigger: "99",
             },
             {
+              id: "diet",
+              message: "Make most of your meal with vegetables and fruits, whole grains, protein, plant oils.",
+              trigger:'99',
+            },
+            {
+              id: "exercise",
+              message: "Make you feel happier, weight loss, good for muscles and bones, increase your energy levels, skin health, reduce pain and all.",
+              trigger:'99',
+            },
+            {
+              id: "sleep",
+              message: "Sleep is an essential function that allows your body and mind to recharge, leaving you refreshed and alert when you wake up.",
+              trigger:'99',
+            },
+            {
               id: "99",
-              message: "I hope that my help you, Thank You!!",
+              message: "I hope that may help you, Thank You!!",
               end: true,
             },
-            // {
-            //   id: '',
-            //   message: '',
-            //   trigger: '',
-            // },
-            //   {
-            //     id:'gender',
-            //     options: [
-            //       { value: "male", label: "Male", trigger: "5" },
-            //       { value: "female", label: "Female", trigger: "5" }
-            //     ]
-            //   },
-            //   {
-            //     id: "5",
-            //     message: "How old are you?",
-            //     trigger: "6"
-            //   },
-            //   {
-            //  id: "6",
-            //   user:true,
-            //   trigger: "end-msg"
-            //   },
-            //     {
-            //       id: "end-msg",
-            //       message: "Thanks! Your data was submitted successfully!",
-            //       end: true
-            //     },
           ]}
           {...config}
           floatingStyle={{
