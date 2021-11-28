@@ -46,29 +46,29 @@ function App() {
             <Appointment />
           </Route>
           <Route exact path="/Covid-19">
-               <Header />
-               <SimpleForm/>
+            <Header />
+            <SimpleForm />
             <Router>
               <Overview />
             </Router>
           </Route>
-          <Route exact path ="/GetMedication">
-             <Header />
-             <Router>
-            <GetMedication/>
+          <Route exact path="/GetMedication">
+            <Header />
+            <Router>
+              <GetMedication />
             </Router>
           </Route>
-          <Route exact path ="/contactUs">
-             <Header />
-             <Router>
-            <ContactUs />
+          <Route exact path="/contactUs">
+            <Header />
+            <Router>
+              <ContactUs />
             </Router>
           </Route>
-          <Route exact path ="/AboutUs">
-             <Header />
-             <SimpleForm/>
-             <Router>
-            <AboutUs />
+          <Route exact path="/AboutUs">
+            <Header />
+            <SimpleForm />
+            <Router>
+              <AboutUs />
             </Router>
           </Route>
         </Switch>

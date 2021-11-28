@@ -42,7 +42,7 @@ const Appointment = ({
   const changeDate = useCallback(
     (newDate) => (
       history.push(
-        `/${parseInt(newDate[0])}/${parseInt(newDate[1])}/${parseInt(newDate[2])}/`
+        `/home/${parseInt(newDate[0])}/${parseInt(newDate[1])}/${parseInt(newDate[2])}/`
       )
     ), [history]
   )

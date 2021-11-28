@@ -1,11 +1,12 @@
 import React, { useState, useMemo } from 'react';
 import { connect } from 'react-redux';
 
-
 import {
   useParams,
   useHistory,
 } from 'react-router-dom';
+
+import { updateAppointment } from '../../../actions.js';
 
 import './styles.scss';
 
@@ -23,24 +24,11 @@ const FIRST_NAME = "firstName";
 const LAST_NAME = "lastName";
 const MOBILE_NUMBER = "mobile";
 
-const updateAppointment = (
-  date,
-  fromTime,
-  userData
-) => (
-  {
-    date,
-    fromTime,
-    userData,
-    type: 'UPDATE_APPOINTMENT',
-  }
-);
-
 const AppointmentDetails = ({
   appointments,
   updateAppointment,
-}) => { 
-  let { date, month, year, timeFrom} = useParams();
+}) => {
+  let { date, month, year, timeFrom } = useParams();
   const currentDate = `${date}/${month}/${year}`;
   const history = useHistory();
   const DATA = useMemo(
@@ -58,21 +46,22 @@ const AppointmentDetails = ({
         [e.target.dataset.type]: e.target.value,
       }
     );
-  } 
-   
+  }
+
   const onClickSave = () => {
+    alert(" Appointment Booked Successfully");
     let error = false;
     let obj = {
       ...userDetails
     };
 
-    [FIRST_NAME,  MOBILE_NUMBER, LAST_NAME].forEach(
-      detail => { 
+    [FIRST_NAME, MOBILE_NUMBER, LAST_NAME].forEach(
+      detail => {
         if (!userDetails[detail]) {
           error = true;
           obj = {
-              ...obj,
-              [detail]: "",
+            ...obj,
+            [detail]: "",
           }
         }
       }
@@ -87,7 +76,7 @@ const AppointmentDetails = ({
     }
 
     updateAppointment(currentDate, timeFrom, obj);
-        
+
     history.goBack();
   }
 
@@ -164,10 +153,10 @@ const AppointmentDetails = ({
       </Row>
     </Container>
   );
- }
+}
 
 export default connect(
-  ({appointments}) => ({
+  ({ appointments }) => ({
     appointments,
   }),
   {
