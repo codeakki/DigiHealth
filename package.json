@@ -34,7 +34,8 @@
     "slick-carousel": "^1.8.1",
     "styled-components": "^4.4.1",
     "typeface-playfair-display": "^1.1.13",
-    "web-vitals": "^1.0.1"
+    "web-vitals": "^1.0.1",
+    "redux-loop": "^6.0.1"
   },
   "scripts": {
     "start": "react-scripts start",
