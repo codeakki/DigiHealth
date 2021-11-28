@@ -49,6 +49,7 @@ const AppointmentDetails = ({
   }
 
   const onClickSave = () => {
+    alert(" Appointment Booked Successfully");
     let error = false;
     let obj = {
       ...userDetails

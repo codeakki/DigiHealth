@@ -125,7 +125,7 @@ class MapsContainer extends Component {
                     photoUrl = medHospital.photos[0].getUrl();
                 }
 
-                // Second, For each medHospital, check if it is within acceptable travelling distance
+                // Second, For each Digihealjt, check if it is within acceptable travelling distance
                 const directionRequest = {
                     origin: markerLatLng,
                     destination: address, // Address of medHospital
