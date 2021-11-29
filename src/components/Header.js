@@ -68,20 +68,19 @@ const Header = (props) => {
       ) : (
         <>
           <NavMenu>
-            <a href="/">
+
+              <Link to="/">
               <img src="/images/home-icon.svg" alt="Home" />
               <span>Home</span>
-            </a>
+               </Link>
               <Link to="/GetMedication">
               <img src="/images/med.png" alt="Get Medications" />
               <span> Get Medications</span>
               </Link>   
-            <a>
               <Link to="/Covid-19">
                 <img src="/images/covid.png" alt="Covid Precautions" />
                 <span>Covid-19</span>
               </Link>
-            </a>
                <Link to="/contactUs">
               <img src="/images/contact.jpg" alt="Contact Us" />
               <span>Contact Us</span>
@@ -207,6 +206,7 @@ const Login = styled.a`
   border: 1px solid #f9f9f9;
   border-radius: 4px;
   transition: all 0.2s ease 0s;
+  color:white;
 
   &:hover {
     background-color: #f9f9f9;
@@ -242,6 +242,7 @@ const SignOut = styled.div`
   cursor: pointer;
   align-items: center;
   justify-content: center;
+  color:white;
 
   ${UserImg} {
     border-radius: 50%;
