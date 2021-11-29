@@ -2,7 +2,7 @@ import firebase from "firebase";
 
 
 const firebaseConfig = {
-  apiKey: "AIzaSyC5O3x42mE64ovB_AuJMiJ52nryI4BdlQ4",
+  apiKey: "API_KEY",
   authDomain: "digi--health.firebaseapp.com",
   projectId: "digi--health",
   storageBucket: "digi--health.appspot.com",
